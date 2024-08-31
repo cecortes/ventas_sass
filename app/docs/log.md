@@ -10,10 +10,11 @@
 
 ## Logs
 
-## 31 de agosto de 2024 - 2hrs
+## 31 de agosto de 2024 - 3hrs 11min
 
 - [x] Create the project structure.
 - [x] Install the dependencies.
 - [x] Start login page.
+- [x] Apply styles to radio buttons.
 
 ---
