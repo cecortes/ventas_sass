@@ -1,0 +1,125 @@
+// Include functions, mixins, and variables here
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Customize Bootstrap variables
+$enable-gradients: true;
+$enable-shadows: true;
+
+// Create your own map of colors
+$custom-colors: (
+  "fondo": #e0e0e0,
+  "primario": #283739,
+  "secundario": #2c5d63,
+  "terciario": #a2c11c,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Include Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Customaize Font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bs-body-font-family: "Montserrat", sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  gap: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0.4em;
+  background-color: var(--bs-primario);
+  border-radius: 25px;
+  transition: 0.4s ease-in-out;
+}
+
+#heading {
+  text-align: center;
+  margin: 1.5em;
+  color: var(--bs-fondo);
+  font-size: 1.6em;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: linear-gradient(
+    to right,
+    var(--bs-primario),
+    var(--bs-fondo)
+  );
+  box-shadow: inset 2px 5px 10px var(--bs-primario);
+  margin-bottom: 1.5rem;
+}
+
+.input-icon {
+  height: 1.6em;
+  width: 1.6em;
+  fill: var(--bs-terciario);
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: var(--bs-terciario);
+}
+
+.form .cta {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2.5em;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.flex-row > div > label {
+  font-size: 14px;
+  color: black;
+  font-weight: 400;
+}
+
+.span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #2d79f3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-submit {
+  margin: 20px 0 10px 0;
+  background-color: #151717;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+}

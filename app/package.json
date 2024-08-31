@@ -1,0 +1,21 @@
+{
+  "name": "sales_sass",
+  "version": "1.0.0",
+  "description": "A sales webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SASS",
+    "BOOTSTRAP",
+    "JS",
+    "WEBAPP",
+    "JQUERY"
+  ],
+  "author": "César López",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
