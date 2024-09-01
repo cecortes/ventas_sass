@@ -11,8 +11,10 @@ $enable-shadows: true;
 $custom-colors: (
   "fondo": #e0e0e0,
   "primario": #283739,
+  "primario-transparente": rgba(#33494d, 0.5),
   "secundario": #2c5d63,
   "terciario": #a2c11c,
+  "terciario-transparente": rgba(#a2c11c, 0.1),
   "negro": #232323,
 );
 
@@ -146,7 +148,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   background: linear-gradient(
     90deg,
     rgba(197, 245, 174, 0.529),
-    var(--bs-terciario)
+    var(--bs-terciario-transparente)
   );
   position: absolute;
   transition: all 0.4s ease-in-out;
@@ -209,4 +211,66 @@ input[type="radio"]:checked + label:before {
 input[type="radio"] + label:hover {
   color: var(--bs-fondo);
   text-decoration: underline;
+}
+
+#google_login,
+#facebook_login {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px 0 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  background: var(--bs-negro);
+  color: var(--bs-fondo);
+  border: var(--bs-negro);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+#google_login:after,
+#facebook_login:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(197, 245, 174, 0.529),
+    var(--bs-terciario-transparente)
+  );
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+  color: var(--bs-negro);
+}
+
+#google_login:hover::after,
+#facebook_login:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+  color: var(--bs-negro);
+}
+
+#google_login:hover,
+#facebook_login:hover {
+  background: var(--bs-terciario);
+  color: var(--bs-negro);
+}
+
+.glassmorph {
+  /* From https://css.glass */
+  background: rgba(40, 55, 57, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(40, 55, 57, 0.02);
 }

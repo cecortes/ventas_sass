@@ -17,5 +17,7 @@
 - [x] Start login page.
 - [x] Apply styles to radio buttons.
 - [x] Adjust the login button.
+- [x] Styles in all buttons.
+- [ ] Modify background color.
 
 ---
