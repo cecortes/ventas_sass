@@ -16,7 +16,7 @@ $custom-colors: (
   "terciario": #a2c11c,
   "terciario-transparente": rgba(#a2c11c, 0.1),
   "negro": #232323,
-  "gradiente": #85ffbd,
+  "gradiente": #c1fa6c,
   "gradiente2": #fffb7d,
 );
 
@@ -76,7 +76,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 .input-icon {
   height: 1.6em;
   width: 1.6em;
-  fill: var(--bs-terciario);
+  fill: var(--bs-gradiente);
 }
 
 .input-field {
