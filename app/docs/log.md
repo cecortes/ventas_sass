@@ -10,7 +10,7 @@
 
 ## Logs
 
-## 31 de agosto de 2024 - 3hrs 41min
+## 31 de agosto de 2024 - 4hrs 41min
 
 - [x] Create the project structure.
 - [x] Install the dependencies.
@@ -18,6 +18,11 @@
 - [x] Apply styles to radio buttons.
 - [x] Adjust the login button.
 - [x] Styles in all buttons.
+
+---
+
+## 1 de setembro de 2024 - 24min
+
 - [ ] Modify background color.
 
 ---

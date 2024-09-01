@@ -16,6 +16,8 @@ $custom-colors: (
   "terciario": #a2c11c,
   "terciario-transparente": rgba(#a2c11c, 0.1),
   "negro": #232323,
+  "gradiente": #85ffbd,
+  "gradiente2": #fffb7d,
 );
 
 // Merge the maps
@@ -82,7 +84,9 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   border: none;
   outline: none;
   width: 100%;
-  color: var(--bs-terciario);
+  color: var(--bs-fondo);
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .form .cta {
@@ -101,13 +105,13 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 .flex-row > div > label {
-  font-size: 14px;
-  color: var(--bs-terciario);
-  font-weight: 400;
+  font-size: 15px;
+  color: var(--bs-primario);
+  font-weight: 500;
 }
 
 .span {
-  font-size: 14px;
+  font-size: 15px;
   margin-left: 5px;
   color: var(--bs-fondo);
   font-weight: 500;
@@ -116,7 +120,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 .span:hover {
-  color: var(--bs-terciario);
+  color: var(--bs-primario);
   text-decoration: underline;
 }
 
@@ -267,10 +271,18 @@ input[type="radio"] + label:hover {
 
 .glassmorph {
   /* From https://css.glass */
-  background: rgba(40, 55, 57, 0.28);
+  background: rgba(40, 55, 57, 0.4);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.1px);
-  -webkit-backdrop-filter: blur(6.1px);
-  border: 1px solid rgba(40, 55, 57, 0.02);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.fondo_gradiente {
+  background-color: var(--bs-gradiente);
+}
+
+.radial_gradiente {
+  background-color: #d3f9e4;
+  background-image: linear-gradient(45deg, #d3f9e4 0%, #8fc356 100%);
 }
