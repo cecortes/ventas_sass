@@ -13,6 +13,7 @@ $custom-colors: (
   "primario": #283739,
   "secundario": #2c5d63,
   "terciario": #a2c11c,
+  "negro": #232323,
 );
 
 // Merge the maps
@@ -118,16 +119,52 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 .button-submit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   margin: 20px 0 10px 0;
-  background-color: #151717;
+  background: var(--bs-negro);
   border: none;
-  color: white;
-  font-size: 15px;
+  color: var(--bs-fondo);
+  font-size: 16px;
   font-weight: 500;
   border-radius: 10px;
   height: 50px;
   width: 100%;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.button-submit:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(197, 245, 174, 0.529),
+    var(--bs-terciario)
+  );
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+  color: var(--bs-negro);
+}
+
+.button-submit:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+  color: var(--bs-negro);
+}
+
+.button-submit:hover {
+  color: #11171c;
+  animation: scaleUp 0.3s ease-in-out;
+  background: var(--bs-terciario);
 }
 
 input[type="radio"] {
