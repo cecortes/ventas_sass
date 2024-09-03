@@ -13944,6 +13944,22 @@ textarea.form-control-lg {
   margin-bottom: 1.5rem;
 }
 
+.field2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  width: 90%;
+  padding: 0.4em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: linear-gradient(to right, var(--bs-primario), var(--bs-fondo));
+  box-shadow: inset 2px 5px 10px var(--bs-primario);
+  margin-bottom: 1.5rem;
+}
+
 .input-icon {
   height: 1.6em;
   width: 1.6em;
@@ -13958,6 +13974,24 @@ textarea.form-control-lg {
   color: var(--bs-fondo);
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+.input-field2 {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: var(--bs-gradiente2);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.input-field2::placeholder {
+  color: var(--bs-gradiente);
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 .form .cta {
@@ -14138,6 +14172,15 @@ input[type=radio] + label:hover {
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glassmorph2 {
+  /* From https://css.glass */
+  background: rgba(40, 55, 57, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(10px);
 }
 

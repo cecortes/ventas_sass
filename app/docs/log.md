@@ -21,8 +21,16 @@
 
 ---
 
-## 1 de setembro de 2024 - 24min
+## 1 de septiembre de 2024 - 24min
 
-- [ ] Modify background color.
+- [x] Modify background color.
+
+---
+
+## 2 de septiembre de 2024 - 2hr 14min
+
+- [x] Create resgister user page.
+- [ ] Make a nice separators and apply.
+- [ ] Continue with the general info section.
 
 ---
