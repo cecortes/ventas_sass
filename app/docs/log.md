@@ -38,5 +38,6 @@
 - [x] Make a nice separators and apply.
 - [x] Continue with the general info section.
 - [x] Finish the general info section and register user page.
+- [x] Start Add new company page as a modal.
 
 ---

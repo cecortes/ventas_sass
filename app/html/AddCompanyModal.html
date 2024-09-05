@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ventas SASS MVP</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/mainStyles.css">
+</head>
+<body>
+
+  <!-- Main container -->
+  <div class="container-fluid vh-100 radial_gradiente text-end pt-3">
+
+    <div class="row">
+
+      <div class="col-12 py-4 px-4">
+
+        <!-- CTA Add -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCompanyModal">
+          Agregar Empresa
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="addCompanyModal" class="modal" tabindex="-1">
+
+    <div class="modal-dialog modal-xl">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+
+          <h5 class="modal-title">Agregar Empresa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        </div>
+
+        <div class="modal-body">
+
+          <form action="" class="mx-auto glassmorph2 py-4">
+
+            <div class="row fs-4 text-fondo fw-light" style="letter-spacing: 3px;">
+
+              <!-- Company info column -->
+              <div class="col-6">
+
+                <p>Registro de Empresa</p>
+
+                <!-- Separator -->
+                <div class="mb-4 px-4">
+                  <hr class="solid">
+                </div>
+
+                <!-- Nombre -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Nombre de la Empresa" class="input-field2" type="text" id="companyName">
+
+                </div>
+
+                <!-- RFC -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="RFC" class="input-field2" type="text" id="rfc">
+
+                </div>
+
+                <!-- Domicilio -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Domicilio" class="input-field2" type="text" id="address">
+
+                </div>
+
+                <!-- Ciudad -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Ciudad" class="input-field2" type="text" id="city">
+
+                </div>
+
+                <!-- Estado -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Estado" class="input-field2" type="text" id="state">
+
+                </div>
+
+                <!-- Código Postal -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Código Postal" class="input-field2" type="text" id="zipCode">
+
+                </div>
+
+              </div>
+
+              <!-- Contact info column -->
+              <div class="col-6">
+
+                <p>Información de Contacto</p>
+
+                <!-- Separator -->
+                <div class="mb-4 px-4">
+                  <hr class="solid">
+                </div>
+
+                <!-- Nombre -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Nombre del Contacto" class="input-field2" type="text" id="contactName">
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  
+  <!-- Bootstrap -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
