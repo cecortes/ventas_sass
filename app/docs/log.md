@@ -30,7 +30,13 @@
 ## 2 de septiembre de 2024 - 2hr 14min
 
 - [x] Create resgister user page.
-- [ ] Make a nice separators and apply.
-- [ ] Continue with the general info section.
+
+---
+
+## 4 de septiembre de 2024 - 52min
+
+- [x] Make a nice separators and apply.
+- [x] Continue with the general info section.
+- [x] Finish the general info section and register user page.
 
 ---
