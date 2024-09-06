@@ -41,3 +41,9 @@
 - [x] Start Add new company page as a modal.
 
 ---
+
+## 5 de septiembre de 2024 - 2hr
+
+- [ ] Continue with the Add new company page.
+
+---

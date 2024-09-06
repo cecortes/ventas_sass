@@ -28,15 +28,15 @@
   </div>
 
   <!-- Modal -->
-  <div id="addCompanyModal" class="modal" tabindex="-1">
+  <div id="addCompanyModal" class="modal bg-primario-transparente2" tabindex="-1">
 
     <div class="modal-dialog modal-xl">
 
-      <div class="modal-content">
+      <div class="modal-content bg-primario bg-gradient">
 
         <div class="modal-header">
 
-          <h5 class="modal-title">Agregar Empresa</h5>
+          <h5 class="modal-title text-gradiente ps-4">Agregar Empresa</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
         </div>
@@ -50,17 +50,11 @@
               <!-- Company info column -->
               <div class="col-6">
 
-                <p>Registro de Empresa</p>
-
-                <!-- Separator -->
-                <div class="mb-4 px-4">
-                  <hr class="solid">
-                </div>
 
                 <!-- Nombre -->
                 <div class="field2 mx-auto">
 
-                  <input autocomplete="off" placeholder="Nombre de la Empresa" class="input-field2" type="text" id="companyName">
+                  <input autocomplete="off" placeholder="Nombre / Razón Social" class="input-field2" type="text" id="companyName">
 
                 </div>
 
@@ -104,17 +98,33 @@
               <!-- Contact info column -->
               <div class="col-6">
 
-                <p>Información de Contacto</p>
-
-                <!-- Separator -->
-                <div class="mb-4 px-4">
-                  <hr class="solid">
-                </div>
-
-                <!-- Nombre -->
+                <!-- Teléfono -->
                 <div class="field2 mx-auto">
 
-                  <input autocomplete="off" placeholder="Nombre del Contacto" class="input-field2" type="text" id="contactName">
+                  <input autocomplete="off" placeholder="No. Celular" class="input-field2" type="tel" id="celnumber">
+
+                </div>
+
+                <!-- Correo Electrónico -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Correo Electrónico" class="input-field2" type="email" id="email">
+
+                </div>
+
+                <!-- Actividad Empresarial -->
+                <div class="field2 mx-auto">
+
+                  <input placeholder="Describa su actividad empresarial" class="input-field2" id="businessActivity" type="text">
+
+                </div>
+
+                <!-- Logotipo -->
+                <label for="logoFile" class="form-label">Archivo logo</label>
+
+                <div class="field2 mx-auto">
+
+                  <input class="form-control archivo" type="file" id="logoFile">
 
                 </div>
 
@@ -128,8 +138,8 @@
 
         <div class="modal-footer">
 
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn button-submit2">Guardar</button>
 
         </div>
 

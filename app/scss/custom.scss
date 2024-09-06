@@ -6,12 +6,15 @@
 // Customize Bootstrap variables
 $enable-gradients: true;
 $enable-shadows: true;
+$form-label-font-size: 1.1rem;
+$form-label-color: var(--bs-gradiente);
 
 // Create your own map of colors
 $custom-colors: (
   "fondo": #e0e0e0,
   "primario": #283739,
   "primario-transparente": rgba(#33494d, 0.5),
+  "primario-transparente2": rgba(#33494d, 0.1),
   "secundario": #2c5d63,
   "terciario": #a2c11c,
   "terciario-transparente": rgba(#a2c11c, 0.1),
@@ -139,6 +142,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   font-weight: 600;
   text-align: center;
   letter-spacing: 2px;
+  resize: none;
 }
 
 .input-field2::placeholder {
@@ -226,6 +230,56 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 .button-submit:hover {
+  color: #11171c;
+  animation: scaleUp 0.3s ease-in-out;
+  background: var(--bs-terciario);
+}
+
+.button-submit2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 0 10px 0 10px;
+  padding: 0 10px;
+  background: var(--bs-negro);
+  border: none;
+  color: var(--bs-fondo);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 42px;
+  width: 10rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.button-submit2:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(197, 245, 174, 0.529),
+    var(--bs-terciario-transparente)
+  );
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+  color: var(--bs-negro);
+}
+
+.button-submit2:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+  color: var(--bs-negro);
+}
+
+.button-submit2:hover {
   color: #11171c;
   animation: scaleUp 0.3s ease-in-out;
   background: var(--bs-terciario);
@@ -370,4 +424,10 @@ hr.solid {
 
 .sel:hover {
   cursor: pointer;
+}
+
+.archivo {
+  border: none;
+  background: none;
+  color: var(--bs-gradiente2);
 }
