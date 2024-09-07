@@ -44,6 +44,12 @@
 
 ## 5 de septiembre de 2024 - 2hr
 
-- [ ] Continue with the Add new company page.
+- [x] Continue with the Add new company page.
+
+---
+
+## 7 de septiembre de 2024 - 1hr
+
+- [x] Finish the Add new company page.
 
 ---

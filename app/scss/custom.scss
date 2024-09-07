@@ -17,6 +17,7 @@ $custom-colors: (
   "primario-transparente2": rgba(#33494d, 0.1),
   "secundario": #2c5d63,
   "terciario": #a2c11c,
+  "azul": #2544c17e,
   "terciario-transparente": rgba(#a2c11c, 0.1),
   "negro": #232323,
   "gradiente": #c1fa6c,
@@ -283,6 +284,56 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   color: #11171c;
   animation: scaleUp 0.3s ease-in-out;
   background: var(--bs-terciario);
+}
+
+.button-submit3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 0 10px 0 10px;
+  padding: 0 10px;
+  background: var(--bs-negro);
+  border: none;
+  color: var(--bs-fondo);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 42px;
+  width: 10rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.button-submit3:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(157, 196, 243, 0.365),
+    var(--bs-azul)
+  );
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+  color: var(--bs-fondo);
+}
+
+.button-submit3:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+  color: var(--bs-fondo);
+}
+
+.button-submit3:hover {
+  color: var(--bs-fondo);
+  animation: scaleUp 0.3s ease-in-out;
+  background: var(--bs-azul);
 }
 
 input[type="radio"] {
