@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ventas SASS MVP</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/mainStyles.css">
+</head>
+<body>
+
+  <!-- Main Container -->
+  <div class="container-fluid vh-100 radial_gradiente text-end pt-3">
+
+    <div class="row">
+
+      <div class="col-12 py-4 px-4">
+
+        <!-- CTA Add -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addClientModal">
+          Agregar Cliente
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="addClientModal" class="modal bg-primario-transparente2" tabindex="-1">
+
+    <div class="modal-dialog modal-xl">
+
+      <div class="modal-content bg-primario bg-gradient">
+
+        <div class="modal-header">
+
+          <h5 class="modal-title text-gradiente ps-4">Agregar Cliente</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        </div>
+
+        <div class="modal-body">
+
+          <form action="" class="mx-auto glassmorph2 py-4">
+
+            <div class="row text-fondo fw-light" style="letter-spacing: 3px;">
+
+              <!-- Client info column -->
+              <div class="col-6">
+
+                <!-- Nombre -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Nombre del cliente" class="input-field2" type="text" id="clientName">
+
+                </div>
+
+                <!-- RFC -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="RFC" class="input-field2" type="text" id="clientRFC">
+
+                </div>
+
+                <!-- Dirección -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Dirección" class="input-field2" type="text" id="clientAddress">
+
+                </div>
+
+                <!-- Container 2 columns No. Ext / No. Int -->
+                <div class="row">
+
+                  <!-- No Ext -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="No. Exterior" class="input-field2" type="text" id="clientExt">
+
+                    </div>
+
+                  </div>
+
+                  <!-- No Int -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="No. Interior" class="input-field2" type="text" id="clientInt">
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- Colonia / CP-->
+                <div class="row">
+
+                  <!-- Colonia -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="Colonia" class="input-field2" type="text" id="clientColonia">
+
+                    </div>
+
+                  </div>
+
+                  <!-- CP -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="Código Postal" class="input-field2" type="text" id="clientCP">
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- Estado / Ciudad -->
+                <div class="row">
+
+                  <!-- Estado -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="Estado" class="input-field2" type="text" id="clientState">
+
+                    </div>
+
+                  </div>
+
+                  <!-- Ciudad -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="Ciudad" class="input-field2" type="text" id="clientCity">
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- Teléfono / Email -->
+                <div class="row">
+
+                  <!-- Teléfono -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="No. Teléfono" class="input-field2" type="tel" id="clientPhone">
+
+                    </div>
+
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="Correo Electrónico" class="input-field2" type="email" id="clientEmail">
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- Additional info column -->
+              <div class="col-6">
+
+                <!-- Contacto -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Contacto" class="input-field2" type="text" id="clientContact">
+
+                </div>
+
+                <!-- Puesto -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Puesto / Área" class="input-field2" type="text" id="clientPosition">
+
+                </div>
+
+                <!-- Tel / Email -->
+                <div class="row">
+
+                  <!-- Teléfono -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="No. Teléfono" class="input-field2" type="tel" id="clientContactPhone">
+
+                    </div>
+
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="Correo Electrónico" class="input-field2" type="email" id="clientContactEmail">
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- Dirección Entregas -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Dirección de Entregas" class="input-field2" type="text" id="clientDeliveryAddress">
+
+                </div>
+
+                <!-- No. Ext / No. Int -->
+                <div class="row">
+
+                  <!-- No Ext -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="No. Exterior" class="input-field2" type="text" id="clientDeliveryExt">
+
+                    </div>
+
+                  </div>
+
+                  <!-- No Int -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="No. Interior" class="input-field2" type="text" id="clientDeliveryInt">
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- Colonia / CP-->
+                <div class="row">
+
+                  <!-- Colonia -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="Colonia" class="input-field2" type="text" id="clientDeliveryColonia">
+
+                    </div>
+
+                  </div>
+
+                  <!-- CP -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="Código Postal" class="input-field2" type="text" id="clientDeliveryCP">
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- Estado / Ciudad -->
+                <div class="row">
+
+                  <!-- Estado -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="Estado" class="input-field2" type="text" id="clientDeliveryState">
+
+                    </div>
+
+                  </div>
+
+                  <!-- Ciudad -->
+                  <div class="col-6">
+
+                    <div class="field2 mx-auto">
+
+                      <input autocomplete="off" placeholder="Ciudad" class="input-field2" type="text" id="clientDeliveryCity">
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+        <div class="modal-footer d-flex justify-content-around">
+
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn button-submit3">Limpiar Campos</button>
+          <button type="button" class="btn button-submit2">Guardar</button>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  
+  <!-- Bootstrap -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -54,3 +54,10 @@
 - [x] Create Add new product page.
 
 ---
+
+## 8 de septiembre de 2024 - 1hr
+
+- [x] Create Add new client page.
+- [x] Done Add new client page.
+
+---
