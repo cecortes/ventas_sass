@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ventas SASS MVP</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/mainStyles.css">
+</head>
+<body>
+
+  <!-- Main Container -->
+  <div class="container-fluid vh-100 radial_gradiente text-end pt-3">
+
+    <div class="row">
+
+      <div class="col-12 py-4 px-4">
+
+        <!-- CTA Add -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">
+          Agregar Producto
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="addProductModal" class="modal bg-primario-transparente2" tabindex="-1">
+
+    <div class="modal-dialog modal-xl">
+
+      <div class="modal-content bg-primario bg-gradient">
+
+        <div class="modal-header">
+
+          <h5 class="modal-title text-gradiente ps-4">Agregar Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        </div>
+
+        <div class="modal-body">
+
+          <form action="" class="mx-auto glassmorph2 py-4">
+
+            <div class="row fs-4 text-fondo fw-light" style="letter-spacing: 3px;">
+
+              <!-- Product info column -->
+              <div class="col-6">
+
+                <!-- Nombre -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Nombre del Producto / Servicio" class="input-field2" type="text" id="productName">
+
+                </div>
+
+                <!-- Descripción -->
+                <div class="field2 mx-auto">
+
+                  <textarea class="form-control input-textarea" id="product_desc" rows="3" aria-label="Descripción" placeholder="Descripción"></textarea>
+
+                </div>
+
+                <!-- Unidades Dropdown -->
+                <div class="field2 mx-auto">
+
+                  <select class="form-select selector" id="product_units" aria-label="Unidades">
+
+                    <option selected>Unidades...</option>
+                    <option value="1">Hora</option>
+                    <option value="2">Pieza</option>
+                    <option value="3">Kilogramo</option>
+                    <option value="4">Litro</option>
+                    <option value="5">Metro</option>
+
+                  </select>
+
+                </div>
+
+                <!-- Contenedor Precio / Moneda -->
+                <div class="field2 mx-auto">
+
+                  <!-- Precio -->
+                  <div class="input-group">
+
+                    <span class="input-group-text etiqueta" id="basic-addon1">$</span>
+                    <input type="text" class="form-control input-field2" placeholder="0.00" aria-label="Precio" aria-describedby="basic-addon1" id="product_price">
+
+                  </div>
+
+                  <!-- Moneda -->
+                  <div class="input-group">
+                      
+                      <select class="form-select selector" id="product_currency" aria-label="Moneda">
+  
+                        <option selected>Moneda...</option>
+                        <option value="1">MXN</option>
+                        <option value="2">USD</option>
+  
+                      </select>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- Additional info column -->
+              <div class="col-6">
+
+                <!-- Imágen Logo -->
+                <div class="row">
+
+                  <div class="col-12 mb-4">
+
+                    <img src="../assets/prodImage.jpg" class="float-start rounded d-block" alt="Foto producto" id="prodImg" height="130px">
+
+                  </div>
+                    
+                </div>
+                
+                <!-- Logotipo -->
+                <label for="logoFile" class="form-label">Imágen del producto</label>
+
+                <div class="field2 mx-auto">
+
+                  <input class="form-control archivo" type="file" id="prodFile">
+
+                </div>
+
+                <!-- Notas adicionales -->
+                <div class="field2 mx-auto">
+
+                  <textarea class="form-control input-textarea" id="product_notes" rows="3" aria-label="Notas" placeholder="Notas adicionales"></textarea>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+        <div class="modal-footer d-flex justify-content-around">
+
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn button-submit3">Limpiar Campos</button>
+          <button type="button" class="btn button-submit2">Guardar</button>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bootstrap -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  
+</body>
+
+</html>

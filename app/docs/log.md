@@ -48,9 +48,9 @@
 
 ---
 
-## 7 de septiembre de 2024 - 1hr
+## 7 de septiembre de 2024 - 1hr 30min
 
 - [x] Finish the Add new company page.
-- [ ] Create Add new product page.
+- [x] Create Add new product page.
 
 ---

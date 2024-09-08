@@ -14202,6 +14202,60 @@ textarea.form-control-lg {
   font-weight: 400;
 }
 
+.input-field2:focus {
+  border: none;
+  outline: none;
+  background-color: linear-gradient(to right, var(--bs-primario), var(--bs-fondo));
+  color: var(--bs-gradiente2);
+}
+
+.input-textarea {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: var(--bs-gradiente2);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: justify;
+  letter-spacing: 2px;
+  resize: none;
+}
+
+.input-textarea::placeholder {
+  color: var(--bs-gradiente);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.input-textarea:focus {
+  border: none;
+  outline: none;
+  background-color: linear-gradient(to right, var(--bs-primario), var(--bs-fondo));
+  color: var(--bs-gradiente2);
+}
+
+.selector {
+  background: linear-gradient(to right, var(--bs-terciario-transparente), var(--bs-primario-transparente2));
+  border: none;
+  outline: none;
+  width: 100%;
+  color: var(--bs-gradiente2);
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.etiqueta {
+  font-size: 1.1rem;
+  color: var(--bs-gradiente);
+  font-weight: 400;
+  border: none;
+  outline: none;
+  background: none;
+}
+
 .form .cta {
   display: flex;
   justify-content: center;
@@ -14510,6 +14564,14 @@ hr.solid {
 .archivo {
   border: none;
   background: none;
+  color: var(--bs-gradiente2);
+  text-align: center;
+}
+
+.archivo:focus {
+  border: none;
+  outline: none;
+  background-color: linear-gradient(to right, var(--bs-primario), var(--bs-fondo));
   color: var(--bs-gradiente2);
 }
 
