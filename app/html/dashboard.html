@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ventas SASS MVP</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/mainStyles.css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- Main container -->
+  <div class="container-fluid radial_gradiente">
+
+    <!-- Main Row -->
+    <div class="row flex-nowrap">
+
+      <!-- Side Menu -->
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+
+        <!-- Menu -->
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+
+          <!-- Menu title link -->
+          <a href="#" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <span class="fs-5 d-none d-sm-inline">
+              Menu
+            </span>
+          </a>
+
+          <!-- Menu items -->
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+
+            <!-- Dashboard -->
+            <li class="nav-item my-2">
+              <a href="#" class="nav-link align-middle px-0 menu-link">
+                <i class="fs-4 bi bi-grid-1x2 ps-2"></i>
+                <span class="ms-1 d-none d-sm-inline px-2">
+                  Dashboard
+                </span>
+              </a>
+            </li>
+
+            <!-- Productos -->
+            <li class="nav-item my-2">
+              <a href="#productos" data-bs-toggle="collapse" class="px-0 align-middle menu-link">
+                <i class="fs-4 bi bi-box-seam ps-2"></i>
+                <span class="ms-1 d-none d-sm-inline px-2">
+                  Productos
+                </span>
+              </a>
+
+              <!-- Submenu Productos -->
+              <ul class="collapse nav flex-column ms-1" id="productos" data-bs-parent="#menu">
+
+                <!-- Agregar Producto -->
+                <li class="w-100">
+                  <a href="#" class="nav-link px-0">
+                    <i class="fs-4 bi bi-plus-circle ps-2"></i>
+                    <span class="d-none d-sm-inline px-2">Agregar</span>
+                  </a>
+                </li>
+
+                <!-- Editar Producto -->
+                <li>
+                  <a href="#" class="nav-link px-0">
+                    <i class="fs-4 bi bi-pen ps-2"></i>
+                    <span class="d-none d-sm-inline px-2">Editar</span>
+                  </a>
+                </li>
+
+                <!-- Eliminar Producto -->
+                <li>
+                  <a href="#" class="nav-link px-0">
+                    <i class="fs-4 bi bi-dash-circle ps-2"></i>
+                    <span class="d-none d-sm-inline px-2">Eliminar</span>
+                  </a>
+                </li>
+
+              </ul>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <!-- Content -->
+      <div class="col py-3">
+
+        <!-- Title -->
+        <h3>Left Sidebar with Submenus</h3>
+
+        <p class="lead">
+          An example 2-level sidebar with collasible menu items. The menu functions like an "accordion" where only a single menu is be open at a time. While the sidebar itself is not toggle-able, it does responsively shrink in width on smaller screens.
+        </p>
+
+        <ul class="list-unstyled">
+          <li>
+            <h5>Responsive</h5>
+            shrinks in width, hides text labels and collapses to icons only on mobile screens.
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+  
+  <!-- Bootstrap -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>

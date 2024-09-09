@@ -14575,4 +14575,50 @@ hr.solid {
   color: var(--bs-gradiente2);
 }
 
+.menu-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 0 10px;
+  padding: 0 10px;
+  background: var(--bs-negro);
+  border: none;
+  color: var(--bs-fondo);
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+}
+
+.menu-link:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(197, 245, 174, 0.529), var(--bs-terciario-transparente));
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+  color: var(--bs-negro);
+}
+
+.menu-link:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+  color: var(--bs-negro);
+}
+
+.menu-link:hover {
+  color: #11171c;
+  animation: scaleUp 0.3s ease-in-out;
+  background: var(--bs-terciario);
+}
+
 /*# sourceMappingURL=mainStyles.css.map */

@@ -55,9 +55,12 @@
 
 ---
 
-## 8 de septiembre de 2024 - 1hr
+## 8 de septiembre de 2024 - 3hr
 
 - [x] Create Add new client page.
 - [x] Done Add new client page.
+- [x] Create a dashboard page.
+- [x] Start Sidebar.
+- [ ] Modify sidebar link styles.
 
 ---
