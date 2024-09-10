@@ -43,47 +43,88 @@
               </a>
             </li>
 
+            <!-- Clientes -->
+            <li class="nav-item my-2">
+              <a href="#clientes" class="nav-link align-middle px-0 menu-link">
+                <i class="fs-4 bi ps-2 bi-people"></i>
+                <span class="ms-1 d-none d-sm-inline px-2">
+                  Clientes
+                </span>
+              </a>
+            </li>
+
             <!-- Productos -->
             <li class="nav-item my-2">
-              <a href="#productos" data-bs-toggle="collapse" class="px-0 align-middle menu-link">
+              <a href="#productos" class="nav-link align-middle px-0 menu-link">
                 <i class="fs-4 bi bi-box-seam ps-2"></i>
                 <span class="ms-1 d-none d-sm-inline px-2">
                   Productos
                 </span>
               </a>
 
-              <!-- Submenu Productos -->
-              <ul class="collapse nav flex-column ms-1" id="productos" data-bs-parent="#menu">
+            </li>
 
-                <!-- Agregar Producto -->
-                <li class="w-100">
-                  <a href="#" class="nav-link px-0">
-                    <i class="fs-4 bi bi-plus-circle ps-2"></i>
-                    <span class="d-none d-sm-inline px-2">Agregar</span>
-                  </a>
-                </li>
+            <!-- Cotizaciones -->
+            <li class="nav-item my-2">
+              <a href="#cotizaciones" class="nav-link align-middle px-0 menu-link">
+                <i class="fs-4 bi bi-file-earmark-pdf ps-2"></i>
+                <span class="ms-1 d-none d-sm-inline px-2">
+                  Cotizaciones
+                </span>
+              </a>
+            </li>
 
-                <!-- Editar Producto -->
-                <li>
-                  <a href="#" class="nav-link px-0">
-                    <i class="fs-4 bi bi-pen ps-2"></i>
-                    <span class="d-none d-sm-inline px-2">Editar</span>
-                  </a>
-                </li>
-
-                <!-- Eliminar Producto -->
-                <li>
-                  <a href="#" class="nav-link px-0">
-                    <i class="fs-4 bi bi-dash-circle ps-2"></i>
-                    <span class="d-none d-sm-inline px-2">Eliminar</span>
-                  </a>
-                </li>
-
-              </ul>
-
+            <!-- Ventas -->
+            <li class="nav-item my-2">
+              <a href="#ventas" class="nav-link align-middle px-0 menu-link">
+                <i class="fs-4 bi bi-currency-dollar ps-2"></i>
+                <span class="ms-1 d-none d-sm-inline px-2">
+                  Ventas
+                </span>
+              </a>
             </li>
 
           </ul>
+
+          <hr>
+
+          <!-- Menu Dropdown -->
+          <div class="dropdown pb-4">
+
+            <!-- Toggle -->
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+
+              <!-- Company Image -->
+              <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+              <span class="d-none d-sm-inline mx-1 text-wrap" id="company_name">Nombre de la compañia</span>
+
+            </a>
+
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser">
+
+              <li>
+                <a href="#" class="dropdown-item">
+                  <i class="fs-6 bi bi-person-lines-fill px-2"></i>
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item">
+                  <i class="fs-6 bi bi-gear px-2"></i>
+                  Configuración
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item">
+                  <i class="fs-6 bi bi-door-open px-2"></i>
+                  Cerrar Sesión
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
 
         </div>
 

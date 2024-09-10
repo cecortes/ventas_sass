@@ -61,6 +61,13 @@
 - [x] Done Add new client page.
 - [x] Create a dashboard page.
 - [x] Start Sidebar.
-- [ ] Modify sidebar link styles.
+
+---
+
+## 9 de septiembre de 2024 - 2hr
+
+- [x] Done menu items.
+- [x] Create profile item.
+- [x] Done sidebar.
 
 ---
