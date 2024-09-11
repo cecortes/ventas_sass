@@ -77,6 +77,8 @@
 - [x] Install jQuery.
 - [x] Create login.js and start the login page logic.
 - [ ] Add styles to the bootstrap for modal, span, titles, and paragraphs.
-- [ ] Start the register page logic.
+- [ ] fix popovers bug.
+- [x] Start the register page logic.
+- [x] Add columns into database.
 
 ---

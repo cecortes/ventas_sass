@@ -6,6 +6,14 @@
   <title>Ventas SASS MVP</title>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/mainStyles.css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <!-- jQuery -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- JS -->
+  <script type="module" src="../js/register.js"></script>
+  <!-- Back4App -->
+  <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
 </head>
 <body>
 
@@ -19,7 +27,7 @@
 
           <div class="col-12 py-4 px-4">
 
-            <form action="" class="mx-auto glassmorph2 py-4">
+            <form role="form" class="mx-auto glassmorph2 py-4">
 
               <div class="row fs-4 text-fondo fw-light" style="letter-spacing: 3px;">
                 
@@ -36,7 +44,7 @@
                   <!-- Nombre -->
                   <div class="field2 mx-auto">
         
-                    <input autocomplete="off" placeholder="Nombre de Usuario" class="input-field2" type="text" id="username">
+                    <input autocomplete="off" placeholder="Nombre de Usuario" class="input-field2" type="text" id="username" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="">
         
                   </div>
 
@@ -177,7 +185,7 @@
                       <!-- Estado -->
                       <div class="field3 mx-auto">
             
-                        <select class="form-select sel">
+                        <select class="form-select sel" id="estado">
 
                           <option selected>Estado</option>
                           <option value="1">CDMX</option>
@@ -202,7 +210,7 @@
                       <!-- Municipio -->
                       <div class="field3 mx-auto">
             
-                        <select class="form-select sel">
+                        <select class="form-select sel" id="municipio">
 
                           <option selected>Municipio</option>
                           <option value="1">Amozoc</option>
@@ -247,7 +255,7 @@
 
                     <div class="col-3 mx-auto">
 
-                      <button class="button-submit">Registrar</button>
+                      <button class="button-submit" id="regBtn" >Registrar</button>
 
                     </div>
 

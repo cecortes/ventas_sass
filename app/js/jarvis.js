@@ -72,3 +72,17 @@ export function showModalError(
   //$modalStyle.addClass("glassmorph");
   $modalId.modal("show");
 }
+
+/* --> ShowPopMsg <-- */
+/* @params: $popMsg as element,
+ *         : $msg as string,
+ * @return: void
+ * @description: Show a popover message over the element
+ *               if has the class popover,
+ *               Focus on the element
+ */
+export function showPopMsg($popMsg, $msg) {
+  $popMsg.attr("data-bs-content", $msg);
+  $popMsg.popover("show");
+  $popMsg.focus();
+}
