@@ -71,3 +71,12 @@
 - [x] Done sidebar.
 
 ---
+
+## 10 de septiembre de 2024 - 2hrs 30min
+
+- [x] Install jQuery.
+- [x] Create login.js and start the login page logic.
+- [ ] Add styles to the bootstrap for modal, span, titles, and paragraphs.
+- [ ] Start the register page logic.
+
+---

@@ -6,6 +6,14 @@
   <title>Ventas SASS MVP</title>
   <!-- CSS -->
   <link rel="stylesheet" href="./css/mainStyles.css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <!-- jQuery -->
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- JS -->
+  <script type="module" src="./js/login.js"></script>
+  <!-- Back4App -->
+  <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
 </head>
 <body>
 
@@ -28,7 +36,8 @@
               <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"></path>
               </svg>
   
-                <input autocomplete="off" placeholder="Usuario" class="input-field" type="text">
+              <input autocomplete="off" placeholder="Usuario" class="input-field" type="text"
+              id="usernameInput">
   
             </div>
   
@@ -39,7 +48,7 @@
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
               </svg>
   
-              <input placeholder="Contraseña" class="input-field" type="password">
+              <input placeholder="Contraseña" class="input-field" type="password" id="pwdInput">
   
             </div>
   
@@ -47,13 +56,13 @@
             <div class="flex-row">
   
               <div class="col-6">
-                <input type="radio" id="remember_me">
-                <label for="remember_me">Recordar credenciales</label>
+                <input type="radio" id="rememberRadio">
+                <label for="rememberRadio">Recordar credenciales</label>
               </div>
   
               <div class="col-6">
   
-                <span class="span">Recuperar contraseña?</span>
+                <span class="span" id="recoverSpan">Recuperar contraseña?</span>
   
               </div>
   
@@ -66,10 +75,10 @@
   
                 <div class="col-9 mx-auto">
   
-                  <button class="button-submit">Ingresar</button>
+                  <button class="button-submit" id="loginBtn">Ingresar</button>
   
                   <p class="p py-2 text-secundario d-flex justify-content-between">No tienes una cuenta? 
-                    <span class="span">Registrarse</span>
+                    <span class="span" id="registerSpan">Registrarse</span>
                   </p>
   
                   <p class="p text-fondo">Acceder con</p>
@@ -128,6 +137,41 @@
     </div>
 
   </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginErrorModal" tabindex="-1" role="dialog" aria-labelledby="loginErrorModal" aria-hidden="true">
+
+      <!-- Modal size & type -->
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+
+        <!-- Modal Content -->
+        <div class="modal-content glassmorph" id="modal-style">
+
+          <!-- Modal Header -->
+          <div class="modal-header text-fondo">
+            <h5 class="modal-title" id="modal-title" style="letter-spacing: 2px;"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            </button>
+          </div>
+
+          <!-- Modal Body -->
+          <div class="modal-body">
+            <div class="py-3 text-center text-white">
+              <i class="fs-4 bi bi-hand-index mb-2"></i>
+              <p class="text-gradiente mt-2" id="modal-text" style="letter-spacing: 2px; font-size: 1.1rem;"></p>
+            </div>          
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn button-submit2" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+
+        </div>
+
+      </div>
+
+  </div>
   
 
   <!-- Bootstrap -->
