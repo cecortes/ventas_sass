@@ -28,10 +28,21 @@ $(function () {
 
     // Validate Name
     if (name != "") {
-      console.log(name);
       // Hide popover
       $nombre.popover("hide");
       $nombre.attr("data-bs-content", "");
+    }
+  });
+
+  $nombre.on("click", function (e) {
+    // Locals
+    let name = $(this).val();
+
+    if (name != "") {
+      $nombre.popover("hide");
+      $nombre.attr("data-bs-content", "");
+      // Destroy popover
+      $nombre.popover("dispose");
     }
   });
 

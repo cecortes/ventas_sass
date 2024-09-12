@@ -22,6 +22,7 @@ $custom-colors: (
   "negro": #232323,
   "gradiente": #c1fa6c,
   "gradiente2": #fffb7d,
+  "alerta": #86232389,
 );
 
 // Merge the maps
@@ -609,4 +610,13 @@ hr.solid {
   color: #11171c;
   animation: scaleUp 0.3s ease-in-out;
   background: var(--bs-terciario);
+}
+
+.custom-popover {
+  --bs-popover-max-width: 210px;
+  --bs-popover-bg: var(--bs-alerta);
+  --bs-popover-body-color: var(--bs-fondo);
+  --bs-popover-header-color: var(--bs-white);
+  --bs-popover-body-padding-x: 1rem;
+  --bs-popover-body-padding-y: 0.5rem;
 }
