@@ -72,14 +72,20 @@
 
 ---
 
-## 10 de septiembre de 2024 - 3hrs 10min
+## 11 de septiembre de 2024 - 3hrs 10min
 
 - [x] Install jQuery.
 - [x] Create login.js and start the login page logic.
-- [ ] Add styles to the bootstrap for modal, span, titles, and paragraphs.
 - [x] Add styles to the bootstrap for popovers.
 - [x] fix popovers bug.
 - [x] Start the register page logic.
 - [x] Add columns into database.
+
+---
+
+## 12 de septiembre de 2024 -
+
+- [ ] Continue with the register page logic.
+- [ ] Add styles to the bootstrap for modal, span, titles, and paragraphs.
 
 ---

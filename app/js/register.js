@@ -46,6 +46,54 @@ $(function () {
     }
   });
 
+  $apellidos.on("input", function (e) {
+    // Locales
+    let lastname = $(this).val();
+
+    // Validate Lastname
+    if (lastname != "") {
+      // Hide popover
+      $apellidos.popover("hide");
+      $apellidos.attr("data-bs-content", "");
+    }
+  });
+
+  $apellidos.on("click", function (e) {
+    // Locals
+    let lastname = $(this).val();
+
+    if (lastname != "") {
+      $apellidos.popover("hide");
+      $apellidos.attr("data-bs-content", "");
+      // Destroy popover
+      $apellidos.popover("dispose");
+    }
+  });
+
+  $contraseña.on("input", function (e) {
+    // Locales
+    let pass = $(this).val();
+
+    // Validate Password
+    if (pass != "") {
+      // Hide popover
+      $contraseña.popover("hide");
+      $contraseña.attr("data-bs-content", "");
+    }
+  });
+
+  $contraseña.on("click", function (e) {
+    // Locals
+    let pass = $(this).val();
+
+    if (pass != "") {
+      $contraseña.popover("hide");
+      $contraseña.attr("data-bs-content", "");
+      // Destroy popover
+      $contraseña.popover("dispose");
+    }
+  });
+
   $btnReg.on("click", function (e) {
     // Prevent default
     e.preventDefault();
@@ -54,6 +102,14 @@ $(function () {
     if ($nombre.val() == "") {
       // Show popover
       jarvis.showPopMsg($nombre, "Este campo es obligatorio");
+      return;
+    } else if ($apellidos.val() == "") {
+      // Show popover
+      jarvis.showPopMsg($apellidos, "Este campo es obligatorio");
+      return;
+    } else if ($contraseña.val() == "") {
+      // Show popover
+      jarvis.showPopMsg($contraseña, "Este campo es obligatorio");
       return;
     }
   });
