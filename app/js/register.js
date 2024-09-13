@@ -94,6 +94,54 @@ $(function () {
     }
   });
 
+  $confirmarContraseña.on("input", function (e) {
+    // Locales
+    let pass = $(this).val();
+
+    // Validate Password
+    if (pass === $contraseña.val()) {
+      // Hide popover
+      $confirmarContraseña.popover("hide");
+      $confirmarContraseña.attr("data-bs-content", "");
+    }
+  });
+
+  $confirmarContraseña.on("click", function (e) {
+    // Locals
+    let pass = $(this).val();
+
+    if (pass === $contraseña.val()) {
+      $confirmarContraseña.popover("hide");
+      $confirmarContraseña.attr("data-bs-content", "");
+      // Destroy popover
+      $confirmarContraseña.popover("dispose");
+    }
+  });
+
+  $tel.on("input", function (e) {
+    // Locales
+    let tel = $(this).val();
+
+    // Validate Tel
+    if (tel != "") {
+      // Hide popover
+      $tel.popover("hide");
+      $tel.attr("data-bs-content", "");
+    }
+  });
+
+  $tel.on("click", function (e) {
+    // Locals
+    let tel = $(this).val();
+
+    if (tel != "") {
+      $tel.popover("hide");
+      $tel.attr("data-bs-content", "");
+      // Destroy popover
+      $tel.popover("dispose");
+    }
+  });
+
   $btnReg.on("click", function (e) {
     // Prevent default
     e.preventDefault();
@@ -110,6 +158,17 @@ $(function () {
     } else if ($contraseña.val() == "") {
       // Show popover
       jarvis.showPopMsg($contraseña, "Este campo es obligatorio");
+      return;
+    } else if ($confirmarContraseña.val() !== $contraseña.val()) {
+      // Show popover
+      jarvis.showPopMsg(
+        $confirmarContraseña,
+        "Las contraseñas no coinciden, favor de verificar"
+      );
+      return;
+    } else if ($tel.val() == "") {
+      // Show popover
+      jarvis.showPopMsg($tel, "Este campo es obligatorio");
       return;
     }
   });

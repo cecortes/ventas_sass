@@ -85,7 +85,8 @@
 
 ## 12 de septiembre de 2024 -
 
-- [ ] Continue with the register page logic.
+- [x] Continue with the register page logic.
+- [ ] Create a function to accept only numbers in the phone field.
 - [ ] Add styles to the bootstrap for modal, span, titles, and paragraphs.
 
 ---
