@@ -83,7 +83,7 @@
 
 ---
 
-## 12 de septiembre de 2024 -
+## 12 de septiembre de 2024 - 1hr 30min
 
 - [x] Continue with the register page logic.
 - [ ] Create a function to accept only numbers in the phone field.
