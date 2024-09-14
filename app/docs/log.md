@@ -86,7 +86,14 @@
 ## 12 de septiembre de 2024 - 1hr 30min
 
 - [x] Continue with the register page logic.
-- [ ] Create a function to accept only numbers in the phone field.
+
+---
+
+## 13 de septiembre de 2024 - 1hr
+
+- [x] Create a function to accept only numbers in the phone field.
+- [x] Finish all popovers on the inputs fields and verifications on the necessary fields.
+- [ ] Create a function to insert the data into the database.
 - [ ] Add styles to the bootstrap for modal, span, titles, and paragraphs.
 
 ---
