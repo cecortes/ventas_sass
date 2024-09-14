@@ -18,12 +18,40 @@ $(function () {
   const $noInt = $("#no_int");
   const $colonia = $("#colonia");
   const $cp = $("#cp");
-  const $estado = $("#estado");
-  const $municipio = $("#municipio");
+  const $errorRegModal = $("#regErrorModal");
+  const $titleModal = $("#modal-title");
+  const $txtModal = $("#modal-text");
   const $btnReg = $("#regBtn");
   var flgPhoneOk = false;
   var flgCpOk = false;
   var flgMailOk = false;
+
+  /* --> Functions <-- */
+
+  /* --> CreateUser <-- */
+  /* @params: Nothing
+   * @return: An object with the user information
+   * @description: Create a user object with the info to be saved
+   */
+  function CreateUser() {
+    // Create an object to store the user information
+    const user = {
+      username: $nombre.val(),
+      lastname: $apellidos.val(),
+      password: $contraseña.val(),
+      phone: $areaCode.val() + $tel.val(),
+      email: $mail.val(),
+      address: $direccion.val(),
+      noExt: $noExt.val(),
+      noInt: $noInt.val(),
+      col: $colonia.val(),
+      cp: $cp.val(),
+      state: $('select[id="estado"] option:selected').text(),
+      muni: $('select[id="municipio"] option:selected').text(),
+    };
+
+    return user;
+  }
 
   /* --> Events <-- */
   $nombre.on("input", function (e) {
@@ -142,6 +170,8 @@ $(function () {
       );
       // Focus on txtPhone
       $tel.focus();
+      // Set flag on false
+      flgPhoneOk = false;
     }
   });
 
@@ -153,6 +183,9 @@ $(function () {
       $tel.attr("data-bs-content", "");
       // Destroy popover
       $tel.popover("dispose");
+    } else {
+      // Set flag on false
+      flgPhoneOk = false;
     }
   });
 
@@ -220,6 +253,8 @@ $(function () {
       jarvis.showPopMsg($cp, "Este campo debe contener sólo 5 dígitos: 12345");
       // Focus on txtCP
       $cp.focus();
+      // Set flag on false
+      flgCpOk = false;
     }
   });
 
@@ -231,6 +266,9 @@ $(function () {
       $cp.attr("data-bs-content", "");
       // Destroy popover
       $cp.popover("dispose");
+    } else {
+      // Set flag on false
+      flgCpOk = false;
     }
   });
 
@@ -264,6 +302,9 @@ $(function () {
       $mail.attr("data-bs-content", "");
       // Destroy popover
       $mail.popover("dispose");
+    } else {
+      // Set flag on false
+      flgMailOk = false;
     }
   });
 
@@ -320,6 +361,8 @@ $(function () {
     } else if ($tel.val() == "") {
       // Show popover
       jarvis.showPopMsg($tel, "Este campo es obligatorio");
+      // Set flag on false
+      flgPhoneOk = false;
       return;
     } else if ($direccion.val() == "") {
       // Show popover
@@ -332,6 +375,8 @@ $(function () {
     } else if ($cp.val() == "") {
       // Show popover
       jarvis.showPopMsg($cp, "Este campo es obligatorio");
+      // Set flag on false
+      flgCpOk = false;
       return;
     } else if ($mail.val() == "") {
       // Show popover
@@ -344,6 +389,30 @@ $(function () {
         "Los correos no coinciden, favor de verificar"
       );
       return;
+    }
+
+    // Validate all flags
+    if (flgPhoneOk && flgCpOk && flgMailOk) {
+      // Check if the user is already logged in
+      if (jarvis.CheckLoginUser()) {
+        console.log("User is set");
+      } else {
+        /* --> Debug <-- */
+        console.log("User is not set");
+
+        // Get a new user
+        const user = CreateUser();
+
+        // Add a new user
+        jarvis.AddNewUser(
+          user,
+          $errorRegModal,
+          $titleModal,
+          "Error",
+          $txtModal,
+          "Error al registrar usuario"
+        );
+      }
     }
   });
 });
