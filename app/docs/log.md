@@ -96,14 +96,15 @@
 
 ---
 
-## 14 de septiembre de 2024 - 2hr
+## 14 de septiembre de 2024 - 3hr
 
 - [x] Create a function to check if the user is logged in.
-- [ ] Create a function to logout the user.
 - [x] Create a function to create a user object.
-- [ ] Create a function to insert the data into the database.
-- [ ] Convert string values to int in phone and cp fields.
+- [x] Create a function to insert the data into the database.
+- [x] Convert string values to int in phone and cp fields.
+- [x] Fix the bug in the fields that have validation functions.
+- [x] Create a function to logout the user.
+- [x] Add a loading spinner to the login and register pages.
 - [ ] Add styles to the bootstrap for modal, span, titles, and paragraphs.
-- [ ] Fix the bug in the fields that have validation functions.
 
 ---

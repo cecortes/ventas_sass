@@ -22,6 +22,7 @@ $(function () {
   const $titleModal = $("#modal-title");
   const $txtModal = $("#modal-text");
   const $btnReg = $("#regBtn");
+  const $loadModal = $("#loadModal");
   var flgPhoneOk = false;
   var flgCpOk = false;
   var flgMailOk = false;
@@ -34,18 +35,27 @@ $(function () {
    * @description: Create a user object with the info to be saved
    */
   function CreateUser() {
+    // Parse string to integer values
+    try {
+      var $telNumber = Number($tel.val());
+      var $cpNumber = Number($cp.val());
+    } catch (error) {
+      /* --> Debug <-- */
+      //console.error(error);
+    }
+
     // Create an object to store the user information
     const user = {
       username: $nombre.val(),
       lastname: $apellidos.val(),
       password: $contraseña.val(),
-      phone: $areaCode.val() + $tel.val(),
+      phone: $telNumber,
       email: $mail.val(),
       address: $direccion.val(),
       noExt: $noExt.val(),
       noInt: $noInt.val(),
       col: $colonia.val(),
-      cp: $cp.val(),
+      cp: $cpNumber,
       state: $('select[id="estado"] option:selected').text(),
       muni: $('select[id="municipio"] option:selected').text(),
     };
@@ -338,6 +348,9 @@ $(function () {
     // Prevent default
     e.preventDefault();
 
+    // Show load modal
+    $loadModal.modal("show");
+
     // Validate txt not null
     if ($nombre.val() == "") {
       // Show popover
@@ -395,11 +408,17 @@ $(function () {
     if (flgPhoneOk && flgCpOk && flgMailOk) {
       // Check if the user is already logged in
       if (jarvis.CheckLoginUser()) {
-        console.log("User is set");
+        // Hide load modal
+        $loadModal.modal("hide");
+        // Show Error Modal
+        jarvis.showModal(
+          $errorRegModal,
+          $titleModal,
+          "Error",
+          $txtModal,
+          "El usuario ya está registrado"
+        );
       } else {
-        /* --> Debug <-- */
-        console.log("User is not set");
-
         // Get a new user
         const user = CreateUser();
 
@@ -412,6 +431,9 @@ $(function () {
           $txtModal,
           "Error al registrar usuario"
         );
+
+        // Hide load modal
+        $loadModal.modal("hide");
       }
     }
   });

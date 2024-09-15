@@ -50,6 +50,15 @@ export function LoginUser(
     });
 }
 
+/* --> LogoutUser <-- */
+/* @params: Nothing
+ * @return: Nothing
+ * @description: Logout the user
+ */
+export function LogoutUser() {
+  Parse.User.logOut();
+}
+
 /* --> CheckLoginUser <-- */
 /* @params: Nothing
  * @return: true if the user is already logged in or false if not
@@ -62,11 +71,11 @@ export function CheckLoginUser() {
   // Check if the user is logged in
   if (currentUser) {
     // User is logged in
-    console.log("User is logged in");
+    //console.log("User is logged in");
     return true;
   } else {
     // User is not logged in
-    console.log("User is not logged in");
+    //console.log("User is not logged in");
     return false;
   }
 }
@@ -113,14 +122,14 @@ export function AddNewUser(
     .save()
     .then(function (user) {
       /* --> Debug <-- */
-      console.log("New object created with ID: ", user.id);
+      //console.log("New object created with ID: ", user.id);
 
       // Re direct to dashboard
       window.location.href = "../html/dashboard.html";
     })
     .catch(function (error) {
       /* --> Debug <-- */
-      console.error("Error: ", error.message);
+      //console.error("Error: ", error.message);
 
       showModalError(
         $modalId,
