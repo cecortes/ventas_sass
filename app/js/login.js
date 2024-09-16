@@ -15,6 +15,7 @@ $(function () {
   const $errorLoginModal = $("#loginErrorModal");
   const $titleModal = $("#modal-title");
   const $txtModal = $("#modal-text");
+  const $loadModal = $("#loadModal");
 
   /* --> Events <-- */
   $spnRecover.on("click", function () {
@@ -50,6 +51,9 @@ $(function () {
       password: password,
     };
 
+    // Show load modal
+    $loadModal.modal("show");
+
     // Login User
     jarvis.LoginUser(
       user,
@@ -57,7 +61,16 @@ $(function () {
       $titleModal,
       "Credenciales Incorrectas",
       $txtModal,
-      ""
+      "",
+      $loadModal
     );
+
+    // Clear fields
+    $inputUsername.val("");
+    $inputPassword.val("");
+    $radioRemember.prop("checked", false);
+
+    // load modal hide
+    $loadModal.modal("hide");
   });
 });

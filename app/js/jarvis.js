@@ -24,17 +24,26 @@ export function LoginUser(
   $modalTitle,
   $tituloModal,
   $modalText,
-  $modalMessage
+  $modalMessage,
+  $modalId2
 ) {
+  // Check if the user is already logged in
+  if (CheckLoginUser()) {
+    // logout the user
+    LogoutUser();
+  }
+  $modalId2.modal("hide");
+
   Parse.User.logIn(usuario.username, usuario.password)
     .then(function (user) {
       // Do stuff after successful login
-      console.log("Logged in user:", user);
+      //console.log("Logged in user:", user);
+      // Redirect to dashboard
+      window.location.href = "./html/dashboard.html";
     })
     .catch(function (error) {
       // The login failed. Check error to see why.
-      console.error("Error: ", error.message);
-
+      //console.error("Error: ", error.message);
       showModalError(
         $modalId,
         $modalTitle,

@@ -105,6 +105,16 @@
 - [x] Fix the bug in the fields that have validation functions.
 - [x] Create a function to logout the user.
 - [x] Add a loading spinner to the login and register pages.
+
+---
+
+## 15 de septiembre de 2024 - 1hr 30min
+
+- [x] Test the login page and fix bugs.
 - [ ] Add styles to the bootstrap for modal, span, titles, and paragraphs.
+
+### :point_up:
+
+- The loadmodal element is not working properly, it's seems the way I'm creating the modal is wrong, cause the modal is showing but I can't close it properly.
 
 ---
