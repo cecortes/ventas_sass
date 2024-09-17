@@ -19,6 +19,9 @@ $(function () {
   const $logoImg = $("#logoImg");
   const $cleanBtn = $("#cleanBtn");
   const $saveBtn = $("#saveBtn");
+  const $errorRegModal = $("#regErrorModal");
+  const $titleModal = $("#modal-title");
+  const $txtModal = $("#modal-text");
   var flgPhoneOk = false;
   var flgEmailOk = false;
   var flgCpOk = false;
@@ -44,6 +47,43 @@ $(function () {
     $business.val("");
     $logoFile.val("");
     $logoImg.attr("src", "../assets/logoDemo.jpg");
+  }
+
+  /* --> CreateCompany <-- */
+  /* @params: none
+   * @trigger: $saveBtn.click()
+   * @return: An object with the company data.
+   * @description: This function is used to create a new company.
+   */
+  function CreateCompany() {
+    // Parse phone and zip to number
+    try {
+      var celNumber = Number($phone.val());
+      var zipCode = Number($zip.val());
+    } catch (error) {
+      /* --> DEBUG <-- */
+      //console.error(error);
+    }
+
+    // Get user object
+    const user = jarvis.GetUser();
+
+    const company = {
+      userId: user.id,
+      companyName: $companyName.val(),
+      rfc: $rfc.val(),
+      address: $address.val(),
+      city: $city.val(),
+      state: $state.val(),
+      zip: zipCode,
+      phone: celNumber,
+      email: $email.val(),
+      business: $business.val(),
+      logo: $logoFile.val(),
+      website: $website.val(),
+    };
+
+    return company;
   }
 
   /* --> Event Handlers <-- */
@@ -389,8 +429,21 @@ $(function () {
 
     // Validate flags
     if (flgPhoneOk && flgEmailOk && flgCpOk) {
+      // Create company
+      const company = CreateCompany();
+
       // Add company
-      alert("Empresa agregada correctamente");
+      jarvis.AddNewCompany(
+        company,
+        $errorRegModal,
+        $titleModal,
+        "Error",
+        $txtModal,
+        "Error al agregar la empresa"
+      );
+
+      // Add company
+      //alert("Empresa agregada correctamente");
     }
   });
 

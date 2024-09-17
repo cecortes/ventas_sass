@@ -89,6 +89,27 @@ export function CheckLoginUser() {
   }
 }
 
+/* --> GetUser <-- */
+/* @params: Nothing
+ * @return: The user object
+ * @description: Get the user from the current session
+ */
+export function GetUser() {
+  // Get the user from the current session
+  const currentUser = Parse.User.current();
+
+  // Check if the user is logged in
+  if (currentUser) {
+    // User is logged in
+    //console.log("User is logged in");
+    return currentUser;
+  } else {
+    // User is not logged in
+    //console.log("User is not logged in");
+    return null;
+  }
+}
+
 /* --> AddNewUser <-- */
 /* @params: usuario as object,
  *        : modalId as element,
@@ -139,6 +160,64 @@ export function AddNewUser(
     .catch(function (error) {
       /* --> Debug <-- */
       //console.error("Error: ", error.message);
+
+      showModalError(
+        $modalId,
+        $modalTitle,
+        $tituloModal,
+        $modalText,
+        error.message
+      );
+    });
+}
+
+/* --> AddNewCompany <-- */
+/* @params: empresa as object,
+ *        : modalId as element,
+ *        : modalTitle as element,
+ *        : modalText as element,
+ *        : modalMessage as element,
+ * @return: Nothing
+ * @description: Add a new company using back4app
+ *           if error show Modal
+ */
+export function AddNewCompany(
+  empresa,
+  $modalId,
+  $modalTitle,
+  $tituloModal,
+  $modalText,
+  $modalMessage
+) {
+  // Extend of Parse.User
+  const Company = Parse.Object.extend("companies");
+
+  // Create a new instance of User
+  const newCompany = new Company();
+  newCompany.set("userId", empresa.userId);
+  newCompany.set("companyName", empresa.companyName);
+  newCompany.set("companyRfc", empresa.rfc);
+  newCompany.set("companyAddr", empresa.address);
+  newCompany.set("companyCity", empresa.city);
+  newCompany.set("companyState", empresa.state);
+  newCompany.set("companyZip", empresa.zip);
+  newCompany.set("companyCel", empresa.phone);
+  newCompany.set("companyMail", empresa.email);
+  newCompany.set("companyActivity", empresa.business);
+  newCompany.set("companyUrl", empresa.website);
+
+  // Save the new user
+  newCompany
+    .save()
+    .then(function (company) {
+      /* --> Debug <-- */
+      console.log("New object created with ID: ", company.id);
+    })
+    .catch(function (error) {
+      /* --> Debug <-- */
+      console.error("Error: ", error.message);
+
+      return;
 
       showModalError(
         $modalId,

@@ -119,11 +119,13 @@
 
 ---
 
-## 16 de septiembre de 2024 - 1hr 30min
+## 16 de septiembre de 2024 - 2hr
 
 - [x] Start Add Company logic.
 - [x] Clean fields function.
 - [x] Add popovers to the inputs fields.
+- [x] Create the class into the database.
 - [ ] Add the logic to insert the data into the database.
+- [ ] Fix the bugs in the Add Company function.
 
 ---
