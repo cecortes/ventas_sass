@@ -118,3 +118,12 @@
 - The loadmodal element is not working properly, it's seems the way I'm creating the modal is wrong, cause the modal is showing but I can't close it properly.
 
 ---
+
+## 16 de septiembre de 2024 - 1hr 30min
+
+- [x] Start Add Company logic.
+- [x] Clean fields function.
+- [x] Add popovers to the inputs fields.
+- [ ] Add the logic to insert the data into the database.
+
+---

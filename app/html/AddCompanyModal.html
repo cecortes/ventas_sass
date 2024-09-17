@@ -6,6 +6,12 @@
   <title>Ventas SASS MVP</title>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/mainStyles.css">
+  <!-- jQuery -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- JS -->
+  <script type="module" src="../js/addcompany.js"></script>
+  <!-- Back4App -->
+  <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
 </head>
 <body>
 
@@ -53,42 +59,49 @@
                 <!-- Nombre -->
                 <div class="field2 mx-auto">
 
-                  <input autocomplete="off" placeholder="Nombre / Razón Social" class="input-field2" type="text" id="companyName">
+                  <input autocomplete="off" placeholder="Nombre / Razón Social" class="input-field2" type="text" id="companyName" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="" data-bs-custom-class="custom-popover">
 
                 </div>
 
                 <!-- RFC -->
                 <div class="field2 mx-auto">
 
-                  <input autocomplete="off" placeholder="RFC" class="input-field2" type="text" id="rfc">
+                  <input autocomplete="off" placeholder="RFC" class="input-field2" type="text" id="rfc" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="" data-bs-custom-class="custom-popover">
 
                 </div>
 
                 <!-- Domicilio -->
                 <div class="field2 mx-auto">
 
-                  <input autocomplete="off" placeholder="Domicilio" class="input-field2" type="text" id="address">
+                  <input autocomplete="off" placeholder="Domicilio" class="input-field2" type="text" id="address" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="" data-bs-custom-class="custom-popover">
 
                 </div>
 
                 <!-- Ciudad -->
                 <div class="field2 mx-auto">
 
-                  <input autocomplete="off" placeholder="Ciudad" class="input-field2" type="text" id="city">
+                  <input autocomplete="off" placeholder="Ciudad" class="input-field2" type="text" id="city" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="" data-bs-custom-class="custom-popover">
 
                 </div>
 
                 <!-- Estado -->
                 <div class="field2 mx-auto">
 
-                  <input autocomplete="off" placeholder="Estado" class="input-field2" type="text" id="state">
+                  <input autocomplete="off" placeholder="Estado" class="input-field2" type="text" id="state" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="" data-bs-custom-class="custom-popover">
 
                 </div>
 
                 <!-- Código Postal -->
                 <div class="field2 mx-auto">
 
-                  <input autocomplete="off" placeholder="Código Postal" class="input-field2" type="text" id="zipCode">
+                  <input autocomplete="off" placeholder="Código Postal" class="input-field2" type="text" id="zipCode" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="" data-bs-custom-class="custom-popover">
+
+                </div>
+
+                <!-- Web page -->
+                <div class="field2 mx-auto">
+
+                  <input autocomplete="off" placeholder="Página Web" class="input-field2" type="text" id="webPage">
 
                 </div>
 
@@ -100,21 +113,21 @@
                 <!-- Teléfono -->
                 <div class="field2 mx-auto">
 
-                  <input autocomplete="off" placeholder="No. Celular" class="input-field2" type="tel" id="celnumber">
+                  <input autocomplete="off" placeholder="No. Celular" class="input-field2" type="tel" id="celnumber" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="" data-bs-custom-class="custom-popover">
 
                 </div>
 
                 <!-- Correo Electrónico -->
                 <div class="field2 mx-auto">
 
-                  <input autocomplete="off" placeholder="Correo Electrónico" class="input-field2" type="email" id="email">
+                  <input autocomplete="off" placeholder="Correo Electrónico" class="input-field2" type="email" id="email" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="" data-bs-custom-class="custom-popover">
 
                 </div>
 
                 <!-- Actividad Empresarial -->
                 <div class="field2 mx-auto">
 
-                  <input placeholder="Describa su actividad empresarial" class="input-field2" id="businessActivity" type="text">
+                  <input placeholder="Describa su actividad empresarial" class="input-field2" id="businessActivity" type="text" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="" data-bs-custom-class="custom-popover">
 
                 </div>
 
@@ -145,8 +158,8 @@
         <div class="modal-footer d-flex justify-content-around">
           
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn button-submit3">Limpiar Campos</button>
-          <button type="button" class="btn button-submit2">Guardar</button>
+          <button type="button" class="btn button-submit3" id="cleanBtn">Limpiar Campos</button>
+          <button type="button" class="btn button-submit2" id="saveBtn">Guardar</button>
           
         </div>
 
