@@ -416,7 +416,8 @@ $(function () {
           $titleModal,
           "Error",
           $txtModal,
-          "El usuario ya está registrado"
+          "El usuario ya está registrado",
+          "error"
         );
       } else {
         // Get a new user

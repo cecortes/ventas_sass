@@ -22,6 +22,7 @@ $(function () {
   const $errorRegModal = $("#regErrorModal");
   const $titleModal = $("#modal-title");
   const $txtModal = $("#modal-text");
+  const $addCompanyModal = $("#addCompanyModal");
   var flgPhoneOk = false;
   var flgEmailOk = false;
   var flgCpOk = false;
@@ -437,9 +438,10 @@ $(function () {
         company,
         $errorRegModal,
         $titleModal,
-        "Error",
+        "Registro de Empresa",
         $txtModal,
-        "Error al agregar la empresa"
+        "",
+        $addCompanyModal
       );
 
       // Add company

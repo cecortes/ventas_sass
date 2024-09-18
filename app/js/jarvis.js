@@ -161,12 +161,13 @@ export function AddNewUser(
       /* --> Debug <-- */
       //console.error("Error: ", error.message);
 
-      showModalError(
+      showModal(
         $modalId,
         $modalTitle,
         $tituloModal,
         $modalText,
-        error.message
+        error.message,
+        "error"
       );
     });
 }
@@ -177,7 +178,7 @@ export function AddNewUser(
  *        : modalTitle as element,
  *        : modalText as element,
  *        : modalMessage as element,
- * @return: Nothing
+ * @return: True if the company was added or false if not.
  * @description: Add a new company using back4app
  *           if error show Modal
  */
@@ -187,7 +188,8 @@ export function AddNewCompany(
   $modalTitle,
   $tituloModal,
   $modalText,
-  $modalMessage
+  $modalMessage,
+  $addCompanyModal
 ) {
   // Extend of Parse.User
   const Company = Parse.Object.extend("companies");
@@ -206,49 +208,89 @@ export function AddNewCompany(
   newCompany.set("companyActivity", empresa.business);
   newCompany.set("companyUrl", empresa.website);
 
-  // Save the new user
+  // Save the new company
   newCompany
     .save()
     .then(function (company) {
       /* --> Debug <-- */
-      console.log("New object created with ID: ", company.id);
-    })
-    .catch(function (error) {
-      /* --> Debug <-- */
-      console.error("Error: ", error.message);
+      //console.log("New object created with ID: ", company.id);
 
-      return;
+      // Hide modal
+      $addCompanyModal.modal("hide");
 
-      showModalError(
+      // Show success modal
+      showModal(
         $modalId,
         $modalTitle,
         $tituloModal,
         $modalText,
-        error.message
+        "!! Empresa agregada exitosamente !!",
+        "success"
+      );
+
+      // Clear fields
+      $("#companyName").val("");
+      $("#rfc").val("");
+      $("#address").val("");
+      $("#city").val("");
+      $("#state").val("");
+      $("#zipCode").val("");
+      $("#celnumber").val("");
+      $("#email").val("");
+      $("#business").val("");
+      $("#webPage").val("");
+      $("#logoFile").val("");
+      $("#logoImg").attr("src", "../assets/logoDemo.jpg");
+    })
+    .catch(function (error) {
+      /* --> Debug <-- */
+      //console.error("Error: ", error.message);
+
+      //$addCompanyModal.modal("hide");
+
+      showModal(
+        $modalId,
+        $modalTitle,
+        $tituloModal,
+        $modalText,
+        error.message,
+        "error"
       );
     });
 }
 
-/* --> ShowModalError <-- */
+/* --> ShowModal <-- */
 /* @params: $modalId as element,
  *         : $modalTitle as element,
  *         : $modalText as element,
  *         : $modalMessage as element,
- *         : $modalStyle as element,
+ *         : $type as string, if error, success or warning
  * @return: void
- * @description: Function to show a modal error
+ * @description: Function to show a modal with the selected type
  */
-export function showModalError(
+export function showModal(
   $modalId,
   $modalTitle,
   $tituloModal,
   $modalText,
-  $modalMessage
+  $modalMessage,
+  $type
 ) {
   $modalTitle.text($tituloModal);
   $modalText.text($modalMessage);
-  //$modalStyle.removeClass("bg-gradient-success");
-  //$modalStyle.addClass("glassmorph");
+  if ($type === "error") {
+    $modalId.removeClass("glass_success");
+    $modalId.removeClass("glass_warning");
+    $modalId.addClass("glass_error");
+  } else if ($type === "success") {
+    $modalId.removeClass("glass_error");
+    $modalId.removeClass("glass_warning");
+    $modalId.addClass("glass_success");
+  } else if ($type === "warning") {
+    $modalId.removeClass("glass_error");
+    $modalId.removeClass("glass_success");
+    $modalId.addClass("glass_warning");
+  }
   $modalId.modal("show");
 }
 

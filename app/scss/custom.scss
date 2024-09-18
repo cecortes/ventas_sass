@@ -508,6 +508,33 @@ input[type="radio"] + label:hover {
   -webkit-backdrop-filter: blur(10px);
 }
 
+.glass_error {
+  /* From https://css.glass */
+  background: rgba(189, 61, 6, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(59, 1, 1, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass_success {
+  /* From https://css.glass */
+  background: rgba(64, 189, 6, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(1, 59, 12, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass_warning {
+  /* From https://css.glass */
+  background: rgba(183, 189, 6, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(58, 59, 1, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .glassmorph2 {
   /* From https://css.glass */
   background: rgba(40, 55, 57, 0.6);
