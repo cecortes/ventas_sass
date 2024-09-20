@@ -133,7 +133,12 @@
 - [x] Add the logic to insert the data into the database.
 - [x] Fix the bugs in the Add Company function.
 - [x] Change function showErrorModal to accept diferent styles.
-- [ ] Test modal funciton adding a new user.
+
+---
+
+## 19 de septiembre de 2024 - 20min
+
+- [x] Test modal funciton adding a new user.
 - [ ] Modify the modal function to improve the background colors.
 
 ---

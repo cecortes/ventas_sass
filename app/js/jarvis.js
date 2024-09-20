@@ -66,6 +66,8 @@ export function LoginUser(
  */
 export function LogoutUser() {
   Parse.User.logOut();
+  /* --> Debug <-- */
+  console.log("User logged out");
 }
 
 /* --> CheckLoginUser <-- */
@@ -80,11 +82,11 @@ export function CheckLoginUser() {
   // Check if the user is logged in
   if (currentUser) {
     // User is logged in
-    //console.log("User is logged in");
+    console.log("User is logged in");
     return true;
   } else {
     // User is not logged in
-    //console.log("User is not logged in");
+    console.log("User is not logged in");
     return false;
   }
 }

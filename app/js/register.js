@@ -416,9 +416,12 @@ $(function () {
           $titleModal,
           "Error",
           $txtModal,
-          "El usuario ya está registrado",
+          "El usuario ya está activo, cerrar sesión para registrar un nuevo usuario",
           "error"
         );
+
+        // logout the user
+        jarvis.LogoutUser();
       } else {
         // Get a new user
         const user = CreateUser();
